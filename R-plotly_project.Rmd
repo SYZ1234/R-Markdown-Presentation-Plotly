@@ -1,0 +1,43 @@
+---
+title: "R Markdown Presentation & Plotly"
+author: "SYZ"
+date: "7/4/2020"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Plot `interactive plot' with Plotly
+
+```{r, fig.align='center', message = FALSE}
+library(plotly)
+data(mtcars)
+#summary(mtcars)
+
+p <- ggplot(mtcars, aes(x = mtcars$disp, mtcars$mpg)) + geom_line() + labs(x = "disp", y = "mpg", title = "mtcars data")
+
+ggplotly(p)
+
+#df <- data.frame(x =  1:10, y = (1:10)^2)
+
+#p <- ggplot(df, aes(x = x, y = y)) + geom_line() + labs(x = "X", y = "Y", title = "X and Y")
+
+#ggplotly(p)
+```
+
+## Thanks :)
+
+
+
+
+
+
+
+
+
+
+
+
+
